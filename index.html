@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soma de gastos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="script.js" defer></script>
+    <script src="https://js.puter.com/v2/"></script>
+  </head>
+  <body>
+    <div class="topo">
+      <h1>📸 Gasto na Foto</h1>
+      <p class="description">Fotografe o comprovante. A IA anota pra você.</p>
+    </div>
+    <div class="meio">
+      <p class="total-gasto-p">Total Gasto</p>
+      <p class="montante">R$ 0, 00</p>
+      <p class="total-gasto-p" id="c-lidos">0 comprovantes lidos</p>
+    </div>
+    <div class="final">
+      <label>
+        🧾 Toque para enviar o comprovante.
+        <input
+          type="file"
+          onchange="lerComprovante()"
+          name="foto-comprovante"
+          id="foto-comprovante"
+        />
+      </label>
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Processando comprovante...</span>
+      </div>
+    </div>
+    <footer>
+      <p class="copy">&copy; Júlio.</p>
+    </footer>
+  </body>
+</html>
